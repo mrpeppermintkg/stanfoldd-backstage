@@ -14,7 +14,7 @@ jobs:
       - name: Use Node.js Installation
         uses: actions/setup-node@v2
         with:
-          node-version: [16.x, 18.x]
+          node-version: "18.x"
 
       - name: Install yarn
         run: yarn install -g 
