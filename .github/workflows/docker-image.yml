@@ -32,10 +32,6 @@ jobs:
       
       - name: 🔨 Build and Push Docker Image 
         run: |
-          npm install
-          npm run build
-      
-      - run: |
           docker image build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/backstage:1.0.1
           docker push ${{ secrets.DOCKER_USERNAME }}/backstage:1.0.1
  
