@@ -32,24 +32,6 @@ import {
 } from '@backstage/plugin-github-actions';
 
 import {
-  EntityAWSLambdaOverviewCard,
-  isAWSLambdaAvailable,
-} from '@roadiehq/backstage-plugin-aws-lambda';
-// ...
-const OverviewContent = ({ entity }: { entity: Entity }) => (
-  <Grid container spacing={3} alignItems="stretch">
-    <EntitySwitch>
-      <EntitySwitch.Case if={isAWSLambdaAvailable}>
-        <Grid item md={6}>
-          <EntityAWSLambdaOverviewCard />
-        </Grid>
-      </EntitySwitch.Case >
-      {/*...*/}
-    </EntitySwitch>
-    {/*...*/}
-  </Grid>
-);
-import {
   EntityUserProfileCard,
   EntityGroupProfileCard,
   EntityMembersListCard,
