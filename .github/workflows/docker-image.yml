@@ -33,7 +33,7 @@ jobs:
       
       - name: 🔨 Build and Push Docker Image 
         run: |
-          docker image build . --file packages/backend/Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/backstage:1.0.1
+          docker image build . --tag ${{ secrets.DOCKER_USERNAME }}/backstage:1.0.1
           docker push ${{ secrets.DOCKER_USERNAME }}/backstage:1.0.1
  
       
