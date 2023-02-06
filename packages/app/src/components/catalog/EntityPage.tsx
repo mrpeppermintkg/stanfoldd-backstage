@@ -30,6 +30,25 @@ import {
   isGithubActionsAvailable,
   EntityGithubActionsContent,
 } from '@backstage/plugin-github-actions';
+
+import {
+  EntityAWSLambdaOverviewCard,
+  isAWSLambdaAvailable,
+} from '@roadiehq/backstage-plugin-aws-lambda';
+// ...
+const OverviewContent = ({ entity }: { entity: Entity }) => (
+  <Grid container spacing={3} alignItems="stretch">
+    <EntitySwitch>
+      <EntitySwitch.Case if={isAWSLambdaAvailable}>
+        <Grid item md={6}>
+          <EntityAWSLambdaOverviewCard />
+        </Grid>
+      </EntitySwitch.Case >
+      {/*...*/}
+    </EntitySwitch>
+    {/*...*/}
+  </Grid>
+);
 import {
   EntityUserProfileCard,
   EntityGroupProfileCard,
@@ -43,6 +62,7 @@ import {
   EntityCatalogGraphCard,
 } from '@backstage/plugin-catalog-graph';
 import {
+  Entity,
   RELATION_API_CONSUMED_BY,
   RELATION_API_PROVIDED_BY,
   RELATION_CONSUMES_API,
