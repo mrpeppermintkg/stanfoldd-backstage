@@ -30,9 +30,6 @@ jobs:
           yarn install --frozen-lockfile
           yarn tsc
           yarn build:backend
-
-      - name: 🔨 Build and Push Docker Image 
-        run: |
           docker build . --tag ${{ secrets.DOCKER_USERNAME }}/backstage:1.0.1
           docker push ${{ secrets.DOCKER_USERNAME }}/backstage:1.0.1
  
