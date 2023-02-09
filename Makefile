@@ -3,9 +3,7 @@
 install: yarn install -g
 
 all: build
-build: $(shell yarn install --frozen-lockfile & \
-	     yarn tsc & \
-			 yarn build:all)
+build: $(shell yarn install --frozen-lockfile & yarn tsc & yarn build:all)
 .PHONY: install build
 
 docker-build: @DOCKER_BUILDKIT=1 docker build --tag ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.2 .
