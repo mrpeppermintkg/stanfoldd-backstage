@@ -9,7 +9,7 @@ test:
 # .PHONY: install build
 
 docker-build:
-	@DOCKER_BUILDKIT=1 docker build --tag ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.2 .
+	@DOCKER_BUILDKIT=1 docker build --tag kartikeyagarg/backstage:v1.0.2 .
 .PHONY:	docker-build
 
 # docker-push: @docker push ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.2
