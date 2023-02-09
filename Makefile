@@ -1,5 +1,4 @@
 # PROJECT_NAME = backstage
-
 all:
 	yarn install -g
 	yarn install --frozen-lockfile
