@@ -1,15 +1,15 @@
 # PROJECT_NAME = backstage
 
-yarn-install:
-		@yarn install -g
+install:
+		yarn install -g
 .PHONY: yarn-install
 
 all: build
 
-yarn-build:
-		@yarn install --frozen-lockfile
-  	@yarn tsc
-  	@yarn build
+build:
+		yarn install --frozen-lockfile
+  	yarn tsc
+  	yarn build
 .PHONY: yarn-build
 
 docker-build:
