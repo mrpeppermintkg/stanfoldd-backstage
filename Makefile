@@ -1,13 +1,12 @@
 # PROJECT_NAME = backstage
 
 install: yarn install -g
-.PHONY: install
 
 all: build
 build: yarn install --frozen-lockfile & \
 	     yarn tsc & \
 			 yarn build:all
-.PHONY: build
+.PHONY: install build
 
 docker-build: @DOCKER_BUILDKIT=1 docker build --tag ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.2 .
 .PHONY: docker-build
