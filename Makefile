@@ -1,7 +1,7 @@
 # PROJECT_NAME = backstage
 
 DOCKER_USERNAME ?= kartikeyagarg
-APPLICATION_NAME ?= backstage:v1.0.2
+APPLICATION_NAME ?= backstage:v1.0.3
 
 test:
 	yarn install -g
