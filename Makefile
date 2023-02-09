@@ -1,6 +1,6 @@
 # PROJECT_NAME = backstage
 
-install: @yarn install -g
+install: yarn install -g
 # build: $(shell yarn install --frozen-lockfile & yarn tsc & yarn build:all)
 .PHONY: install
 #.PHONY: install build
