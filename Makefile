@@ -6,11 +6,11 @@ yarn-install:
 
 yarn-build:
 	@yarn install --frozen-lockfile
-    @yarn tsc
-    @yarn build:all
+  @yarn tsc
+  @yarn build:all
 .PHONY: yarn-build
 
-docker-build: 
+docker-build:
 	@DOCKER_BUILDKIT=1 docker build --tag ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.2 .
 .PHONY: docker-build
 
