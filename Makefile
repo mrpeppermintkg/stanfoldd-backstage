@@ -8,17 +8,6 @@ all:
 # build: $(shell yarn install --frozen-lockfile & yarn tsc & yarn build:backend)
 # .PHONY: install build
 
-<<<<<<< HEAD
-all:
-	yarn install -g
-	yarn install --frozen-lockfile
-	yarn tsc
-	yarn build:backend
-=======
-# docker-build: @DOCKER_BUILDKIT=1 docker build --tag ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.2 .
-# .PHONY: docker-build
->>>>>>> c4c48a115cadfd5ecb1e1aa0f664b8650ad58fb1
-
 # docker-push: @docker push ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.2
 # .PHONY: docker-push
 # # docker-registry:
