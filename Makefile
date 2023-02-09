@@ -16,8 +16,8 @@ docker-build:
 	@DOCKER_BUILDKIT=1 docker build --tag ${DOCKER_USERNAME}/${APPLICATION_NAME} .
 .PHONY:	docker-build
 
-docker-push: @docker push ${DOCKER_USERNAME}/${APPLICATION_NAME}
-.PHONY: docker-push
+# docker-push: @docker push ${DOCKER_USERNAME}/${APPLICATION_NAME}
+# .PHONY: docker-push
 # # docker-registry:
 # 	@printf "727224480698.dkr.ecr.us-east-1.amazonaws.com/$(OMD_SERVICE)/$(OMD_MICROSERVICE)"
 # .PHONY: docker-registry
