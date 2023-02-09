@@ -24,6 +24,7 @@ jobs:
 
       - name: Install yarn
         run: make install
+        run: make tsc
 
       - name: 🔨 Build App
         run: make build
