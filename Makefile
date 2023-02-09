@@ -8,13 +8,10 @@ test:
 # build: $(shell yarn install --frozen-lockfile & yarn tsc & yarn build:backend)
 # .PHONY: install build
 
-<<<<<<< HEAD
 docker-build:
 	@DOCKER_BUILDKIT=1 docker build --tag ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.2 .
 .PHONY:	docker-build
 
-=======
->>>>>>> main
 # docker-push: @docker push ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.2
 # .PHONY: docker-push
 # # docker-registry:
