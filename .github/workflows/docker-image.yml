@@ -23,21 +23,22 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
     
       - name: Install yarn
-        run: yarn install -g
+        run: make yarn-install
 
       - name: 🔨 Build App
-        run: |
-          yarn install --frozen-lockfile
-          yarn tsc
-          yarn build:all
+        run: make yarn-build
       - name: Build Docker Image
-        uses: docker/build-push-action@v2
-        with:
-            context: .
-            tags: ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.1
-            build-args: |
-              DOCKER_BUILDKIT=1
-            push: true
+        run: make docker-build
+      - name: Push Docker-Image
+        run: make docker-push
+
+        # uses: docker/build-push-action@v2
+        # with:
+        #     context: .
+        #     tags: ${{ secrets.DOCKER_USERNAME }}/backstage:v1.0.1
+        #     build-args: |
+        #       DOCKER_BUILDKIT=1
+        #     push: true
 
  
       
